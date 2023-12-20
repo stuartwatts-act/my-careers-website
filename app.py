@@ -1,11 +1,12 @@
-from flask import Flask
+from os import O_NDELAY, O_RDONLY
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def hello_world():
-  return "Hello Stu!"
+  return render_template('home.html')
 
 
 if __name__ == "__main__":
