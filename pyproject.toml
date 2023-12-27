@@ -9,6 +9,8 @@ packages = [{include = "repl_nix_my_careers_website_2"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 flask = "^3.0.0"
+sqlalchemy = "^2.0.23"
+consultor = "^0.2.0"
 
 
 [build-system]
