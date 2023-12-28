@@ -1,9 +1,24 @@
 <style>
-  #banner {
+  /* #banner {
     height: 360px;
     width: 100%;
     object-fit:cover;
     margin-bottom: 16px;
+  } */
+
+  /* Style for medium and large screens */
+  .banner {
+    width: 728px;
+    height: 90px;
   }
+
+  /* Style for smaller screens */
+  @media (max-width: 767px) {
+    .banner {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
 </style>
 <img class="img-fluid" id="banner" src="https://my-careers-website-2.trailinlife.repl.co/static/banner.jpg" alt="banner">
