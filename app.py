@@ -32,7 +32,7 @@ def apply_to_job(id):
   data = request.form
   job = load_job_from_db(id)
   # add_application_to_db(id, data)
-  return render_template('application_submitted.html', 
+  return render_template('application_submitted.html',
                          application=data,
                          job=job)
 
