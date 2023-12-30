@@ -30,23 +30,10 @@ def load_job_from_db(id):
       return rows[0]._asdict()
 
 
-# def add_application_to_db(job_id, data):
-#   with engine.connect() as conn:
-#     query = text(
-#         "INSERT INTO applications (job_id, full_name, email, linkedin_url, education, work_experience, resume_url) VALUES (:job_id, :full_name, :email, :linkedin_url, :education, :work_experience, :resume_url)"
-#     )
+def add_application_to_db(job_id, data):
+  with engine.connect() as conn:
+    query = text(
+        f"INSERT INTO applications (job_id, full_name, email, linkedin_url, education, work_experience, resume_url) VALUES ({job_id}, '{data['full_name']}', '{data['email']}', '{data['linkedin_url']}', '{data['education']}', '{data['work_experience']}', '{data['resume_url']}')"
+    )
 
-#     # Check if all keys in 'data' exist
-#     expected_keys = [
-#         'full_name', 'email', 'linkedin_url', 'education', 'work_experience',
-#         'resume_url'
-#     ]
-#     if not all(key in data for key in expected_keys):
-#       raise ValueError("Missing keys in data dictionary")
-
-#     # Make sure the keys match the column names exactly
-#     conn.execute(
-#         query,
-#         job_id=job_id,
-#         **data  # Pass the dictionary directly to unpack its values
-#     )
+    conn.execute(query)
