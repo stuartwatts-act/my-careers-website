@@ -1,24 +1,13 @@
 <style>
-  /* #banner {
-    height: 360px;
-    width: 100%;
-    object-fit:cover;
-    margin-bottom: 16px;
-  } */
-
-  /* Style for medium and large screens */
   .banner {
-    width: 728px;
-    height: 90px;
+    width: 100%; /* Spread across the entire width */
+    height: auto; /* Allow the height to adjust based on the aspect ratio */
+    max-width: 100%; /* Ensure it doesn't exceed its original size */
+    max-height: 480px; /* Set a maximum height in pixels */
+    display: block; /* Ensures it behaves as a block element */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
   }
-
-  /* Style for smaller screens */
-  @media (max-width: 767px) {
-    .banner {
-      width: 100%;
-      height: auto;
-    }
-  }
-  
 </style>
-<img class="img-fluid" id="banner" src="https://my-careers-website-2.trailinlife.repl.co/static/banner.jpg" alt="banner">
+
+<img class="img-fluid banner" src="/static/banner.jpg" alt="banner">
