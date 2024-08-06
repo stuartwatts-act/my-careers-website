@@ -1,2 +1,2 @@
 # my-careers-website
-My first website using Flask
+Website created using Flask
